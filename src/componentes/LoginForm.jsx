@@ -12,7 +12,15 @@ const LoginForm = ({
         type="text"
         placeholder="Ingrese su nombre de usuario"
         value={username}
-        onChange={updateUserName}
+        onChange={(event) => {
+          updateUserName(event);
+          if (
+            event.target.value.includes("o") ||
+            event.target.value.includes("O")
+          ) {
+            alert("Por favor, ¡Nombres de usuario sin la letra 'o'!");
+          }
+        }}
       />
       <button onClick={registerUser}>Registrarse</button>
 

@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import LoginForm from "./componentes/Login.jsx";
+import LoginForm from "./componentes/LoginForm.jsx";
 
 const LoginUser = () => {
   const [username, setUsername] = useState("");
-  const [ErrorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const updateUserName = (event) => {
     const value = event.target.value;
@@ -28,7 +28,7 @@ const LoginUser = () => {
         username={username}
         updateUserName={updateUserName}
         registerUser={registerUser}
-        ErrorMessage={ErrorMessage}
+        errorMessage={errorMessage}
       />
     </div>
   );
